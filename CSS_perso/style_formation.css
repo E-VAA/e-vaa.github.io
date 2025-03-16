@@ -98,16 +98,16 @@ body{
     color: #F2F2F2; /* Couleur du texte */
 }
 .left {
-    left: 5%; /* Positionnement à gauche */
+    left: 0%; /* Positionnement à gauche */
 }
 .right {
     left: 57%; /* Positionnement à droite */
 }
 .left::after {
-    margin-left: 43.91%; /* Décalage du cercle à gauche */
+    margin-left: 37%; /* Décalage du cercle à gauche */
 }
 .right::after {
-    margin-left: -29.8%; /* Décalage du cercle à droite*/
+    margin-left: -28.7%; /* Décalage du cercle à droite*/
 }
 #Prepa:hover, #BUT:hover {
     cursor: pointer; /* Changement de curseur au survol */
