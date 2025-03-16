@@ -1,0 +1,195 @@
+/***** Format 1920px ******/
+body{
+	background-color: #DDD5D0 !important; /* Couleur de fond de la page : couleur Timberwolf */
+	font-weight: 500; /* Grossir le texte */
+	overflow-x: hidden; /* Pas de défilement horizontal */
+}
+/*****BANNIERE*****/
+#nom_prenom{
+	float: left; /* Place l'élément à gauche de l'écran */
+	margin-top: 7px; /* espace haut */
+	margin-left: 15px; /* espace gauche */
+	color: #56445D; /* Couleur du texte : English Violet */
+	font-family: 'Century Schoolbook', serif; /* Police du texte : Century School */
+}
+/***Barres de couleur***/
+#rose, #violet{
+	width: 100%; /* Prend la largeur de toute l'écran */
+	height: 60px; /* Hauteur des barres de couleurs */
+	margin: 0; /* Pas de marge */
+}
+#rose{
+	background-color: #EADAD7; /* Couleur de la barre 1 : Misty Rose */
+}
+#violet{
+	background-color: #56445D; /* Couleur de la barre 2 : English Violet */
+	margin-bottom: 5%; /* Margin-bottom de 5% de la hauteur d'écran */
+}
+
+/*** Barre de navigation ***/
+.navbar {
+    width: 100%; /* Étendue sur la largeur de l'écran */
+    padding: 0 !important; /* Suppresion du padding */
+    margin: 0 !important; /* Suppression du margin */
+	top: 5px; /* Espace haut */
+}
+
+#navbarNavDropdown {
+    justify-content: flex-end; /* Alignement des éléments à droite */
+    background-color: #56445D; /* Couleur English Violet */
+    padding: 0 !important; /* Suppresion du padding */
+    margin: 0 !important; /* Suppresion du margin */
+}
+
+.navbar-nav {
+    margin: 0 !important; /* Suppresion du margin */
+    padding: 0 !important; /* Suppresion du padding */
+}
+/* Style des liens */
+.nav-item .nav-link {
+    background-color: #56445D !important; /* Fond de lien de couleur English Violet */
+    color: #EADAD7 !important; /* couleur des lien Misty Rose */
+    font-family: 'Montserrat', sans-serif; /* Police d'écriture */
+    font-size: 110%; /* Taille du texte */
+}
+
+/*** Parcours d'étude ***/
+.timeline{
+	width: 80%; /* Largeur = 80% de l'écran */
+	margin: 0 auto; /* Élément centré horizontalement */
+	position: relative; /* Positionnement par rapport au parent */
+	border: none; /* Pas de bordure */
+}
+/*règle blanche verticale*/
+.timeline::after {
+    content: ""; /* Création d'un élément vide */
+    width: 6px; /* Largeur de la ligne */
+    background-color: #F2F2F2; /* Couleur de la ligne (blanc cassé) */
+    position: absolute; /* Position absolue par rapport à .timeline */
+    top: 0px; /* Ligne commençant d'en haut du conteneur */
+    bottom: 0px; /* Ligne étendue jusqu'en bas */
+    left: 50%; /* Ligne centrée horizontalement */
+}
+.container {
+    position: relative; /* Positionnement par rapport au parent */
+    display: inline-block; /* Affichage en ligne avec le bloc */
+}
+/*cercle sur la timeline*/
+.container::after {
+    content: ""; /* Création d'un élément vide */
+    position: absolute; /* Positionnement absolu du cercle */
+    left: 20%; /* Positionne le cercle à 20% de la largeur de son parent */
+    top: 15px; /* Positionne le cercle à 15px du haut */
+    width: 25px; /* Largeur du cercle */
+    height: 25px; /* Hauteur du cercle */
+    border-radius: 50%; /* Forme un cercle parfait */
+    right: 20%; /*  Positionne à droite de l'écran à 20%*/
+    border: 4px solid #BB728A; /* Bordure de 4px de couleur #BB728A (Chinese Rose) */
+    background-color: #F2F2F2; /* Fond du cercle (blanc cassé) */
+    z-index: 1; /* Positionne le cercle devant les autres éléments */
+}
+.content {
+    width: 50%; /* Largeur du bloc de contenu (50% de l'écran) */
+    border-radius: 10px; /* Coins arrondis */
+    font-size: 100%; /* Taille de police de 100% */
+    text-align: center; /* Texte centré */
+    padding: auto; /* Pas de padding */
+    background-color: #56445D; /* Couleur de fond : English Violet */
+    color: #F2F2F2; /* Couleur du texte */
+}
+.left {
+    left: 0%; /* Positionnement à gauche */
+}
+.right {
+    left: 57%; /* Positionnement à droite */
+}
+.left::after {
+    margin-left: 37%; /* Décalage du cercle à gauche */
+}
+.right::after {
+    margin-left: -28.7%; /* Décalage du cercle à droite*/
+}
+#Prepa:hover, #BUT:hover {
+    cursor: pointer; /* Changement de curseur au survol */
+	background : linear-gradient(125deg, #56445D 92.5%, #BFACB5); /* Nouvelle couleur au survol : Rose Quartz */
+}
+
+
+/************************************/
+/***** FORMAT TELEPHONE : 600px *****/
+@media only screen and (max-width: 600px) { /* ACTIVATION UNIQUEMENT POUR ÉCRAN DE 600PX ET MOINS */
+	/* Ajustement de la navbar */
+    .navbar {
+        position: fixed; /* Barre de navigation fixée en haut */
+        top: 10px; /* Margin haut */
+        left: 0; /* Margin left */
+        width: 100%; /* Prend toute la largeur de l'écran */
+        z-index: 2; /* S'assure que la navbar passe toujours au-dessus des autres éléments */
+    }
+
+    #navbarNavDropdown {
+        text-align: center; /* Texte centré */
+        padding: 10px; /* Padding de 10px */
+        width: 100% !important; /* Force le dropdown à prendre toute la largeur */
+        position: absolute; /* Position libre par rapport à .navbar */
+        left: 0;  /* Positionne le menu à gauche de l'écran */
+        right: 0; /* Assure que le menu occupe toute la largeur */
+        background-color: #56445D; /* Couleur de fond : English Violet */
+    }
+
+    .navbar-toggler {
+        border-color: #EADAD7; /* Couleur de la bordure de cadre : Misty Roses */
+    }
+
+    /* Modification de .navbar-collapse pour s'assurer que la navbar prend toute la largeur */
+    .navbar-collapse {
+        position: absolute; /* Position libre */ 
+        top: 50px; /* Ajuste la position du menu déroulant */
+        left: 0; /* Étendue à gauche (0 = pas de margin) */
+        right: 0; /* Étendue à droite (0 = pas de margin) */
+        width: 100%; /* Le menu occupe toute la largeur */
+        background-color: #56445D; /* Même couleur de fond que la navbar */
+    }
+
+    .nav-item {
+        width: 100%; /* Chaque item prend toute la largeur */
+    }
+
+    .nav-link {
+        width: 100%; /* Prend toute la largeur */
+        text-align: center; /* Centrer les liens dans chaque item */
+        padding: 15px 0; /* Ajuste la hauteur des éléments du menu */
+        color: #EADAD7 !important; /* Assurez-vous que la couleur du texte est bien visible */
+    }
+
+	/*PAGE*/
+    .timeline {
+        top: 5%; /* Espacement haut de 5% */
+        transition: margin-top 0.3s ease; /* Pour rendre l'animation fluide */
+    }
+
+    .timeline::after { 
+        display: none; /* Supprime la ligne verticale */
+    }
+
+    .container::after { 
+        display: none; /* Supprime les cercles */
+    }
+
+    .container {
+        width: 100%; /* Prend la largeur totale de l'écran */
+        display: block; /*  */
+        position: relative; /* Positionnement par rapport au parent */
+        left: 0; /* aucun espace à gauche */
+        margin-bottom: 20px; /* Ajoute de l'espace entre les éléments */
+    }
+
+    .content {
+        width: 100%; /* Prend la largeur total de l'élément */
+        margin: 0 auto; /* Centre les blocs */
+        text-align: left; /* Texte aligné à gauche */
+        padding: 5px 5px 5px 5px; /* Padding de 5px autour du texte */
+    }
+}
+
+
