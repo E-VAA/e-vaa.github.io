@@ -1,0 +1,113 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>E-portfolio d'Eva BERTRAND</title>
+		<meta charset='utf-8'>
+		<link rel='stylesheet' type='text/css' href='CSS_perso/style_formation.css'>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Century+Schoolbook&display=swap">
+		<link rel='stylesheet' type='text/css' href='CSS_bootstrap\bootstrap.min.css'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	
+	<body>
+		<header>
+			<div id='rose'>
+				<h1 id='nom_prenom'>Eva BERTRAND</h1>
+			</div>
+			<div id='violet'>
+				<nav class="navbar navbar-expand-lg navbar-dark container-fluid">
+					<div class="container-fluid">
+						<a class="navbar-brand" href="#"></a>
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarNavDropdown">
+							<ul class="navbar-nav">
+								<li class="nav-item">
+									<a class="nav-link" href="Presentation.html">A Propos de Moi </a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="#"><b>Mes Formations</b></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="Competence.html">Mes Compétences</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="Experience.html">Expérience Profesionnelle </a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="Projet.html">Mes Projets</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="Contact.html">Contact et CV</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+	
+	
+	
+		<!---- PAGE DE FORMATIONS ---->
+		<div class="timeline">
+			<div class="container left"> <!-- Classe avec deux mots séparés par un espace permet une sélection de chaque mot en css -->
+				<div id='Bac' class="content">
+					<h3>Baccalauréat Sciences et Technologies de l'Indusdrie et du Développement Durable</h3>
+					<p>Diplômée en 2021 - Mention 'Bien'</p>
+					<p>Lycée Jean Macé, 02300 Chauny</p>
+					<p>Spécialités :
+						<li>Mathématiques et Physique-Chimie</li>
+						<li>2I2D (Ingénierie, Innovation et Développement Durable)</li>
+						<li>IT (Innovation Technologique)</li>
+					</p>
+				</div>
+			</div>
+			<div class="container right">
+				<div id='Prepa' class="content" onclick="location.href='https://lycee-thuillier.fr/la-filiere-scientifique-prepa-tsi/';">
+					<h3>Classe Préparatoire Technologie et Sciences Industrielle</h3>
+					<p>2021 - 2022</p>
+					<p>Lycée Louis Thuillier – 80000, Amiens</p>
+					<p>Spécialités :							
+						<li>Mathématiques et Physique-Chimie et Sciences Industrielles</li>
+						<li>Automatisme, Informatique Industrielle et Mécanique</li>
+					</p>
+				</div>
+			</div>
+			<div class="container left">
+				<div id='BUT' class="content" onclick="location.href='https://iutparis-seine.u-paris.fr/metiers-de-la-data/bachelor-universitaire-de-technologie-stid/';">
+					<h3>BUT Science des Données</h3>
+					<p>Anciennement STID, Bac+3</p>
+					<p>2022 - 2025</p>
+					<p>IUT Paris Rive de Seine, 75016 Paris</p>
+					<p>Parcours : VCOD - Visualisation et Conception d'Outils Décisionnel</p>
+				</div>
+			</div>
+		</div>
+		
+		<!---- JAVASCRIPT ET BOOTSTRAP ---->
+		<script>
+    // Sélectionner le bouton toggler et la timeline
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const timeline = document.querySelector('.timeline');
+
+    // Ajouter un événement "click" sur le bouton toggler
+    navbarToggler.addEventListener('click', function() {
+      // Vérifier si le menu est ouvert (basé sur l'attribut aria-expanded)
+      const isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
+
+      // Si le menu est ouvert, déplacer la timeline vers le bas
+      if (isExpanded) {
+        timeline.style.marginTop = '55%'; // Déplace la timeline vers le bas
+      } else {
+        timeline.style.marginTop = '5%'; // Remet la timeline à sa position d'origine
+      }
+    });
+  </script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	
+	</body>
+</html>
