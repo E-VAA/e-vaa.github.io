@@ -144,6 +144,7 @@ body{
         width: 100%; /* Prend toute la largeur */
         display: block; /* Annule Flexbox pour assurer un affichage en bloc */
         margin-bottom: 20px; /* Ajoute de l'espace entre les éléments */
+		height: 100%;
     }
 
     .content {
