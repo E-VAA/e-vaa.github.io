@@ -134,7 +134,7 @@ h3 {
 
 /************************************/
 /***** FORMAT TELEPHONE : 600px *****/
-@media screen and (max-width: 720px) { /* ACTIVATION UNIQUEMENT POUR ÉCRAN DE 600PX ET MOINS */
+@media screen and (max-width: 1170px) { /* ACTIVATION UNIQUEMENT POUR ÉCRAN DE 600PX ET MOINS */
 	/* Ajustement de la navbar */
         .navbar {
         position: fixed; /* Barre de navigation fixée en haut */

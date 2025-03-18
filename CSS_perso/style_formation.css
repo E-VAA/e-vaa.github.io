@@ -89,7 +89,7 @@ body{
 
 /************************************/
 /***** FORMAT TELEPHONE  *****/
-@media screen and (max-width: 720px) { /* ACTIVATION UNIQUEMENT POUR ÉCRAN DE 600PX ET MOINS */
+@media screen and (max-width: 1170px) { /* ACTIVATION UNIQUEMENT POUR ÉCRAN DE 600PX ET MOINS */
 	/* Ajustement de la navbar */
     .navbar {
         position: fixed; /* Barre de navigation fixée en haut */
@@ -135,24 +135,24 @@ body{
 
 	/*PAGE*/
     .timeline {
-        top: 5%; /* Espacement haut de 5% */
-        transition: margin-top 0.3s ease; /* Pour rendre l'animation fluide */
+        flex-direction: column; /* Empile les containers en colonne */
+        align-items: center; /* Centre les containers */
+        display: flex; /* S'assurer que Flexbox est appliqué */
     }
 
     .container {
-        width: 100%; /* Prend la largeur totale de l'écran */
-        display: block; /*  */
-        position: relative; /* Positionnement par rapport au parent */
-        left: 0; /* aucun espace à gauche */
+        width: 100%; /* Prend toute la largeur */
+        display: block; /* Annule Flexbox pour assurer un affichage en bloc */
         margin-bottom: 20px; /* Ajoute de l'espace entre les éléments */
     }
 
     .content {
-        width: 100%; /* Prend la largeur total de l'élément */
-        margin: 0 auto; /* Centre les blocs */
-        text-align: left; /* Texte aligné à gauche */
-        padding: 5px 5px 5px 5px; /* Padding de 5px autour du texte */
+        width: 90%; /* Réduire légèrement la largeur pour un meilleur affichage */
+        margin: 0 auto; /* Centrer les blocs */
+        text-align: center; /* Centrer le texte */
+        padding: 15px; /* Espacement intérieur */
     }
 }
+
 
 
