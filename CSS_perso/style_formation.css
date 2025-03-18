@@ -2,7 +2,6 @@
 body{
 	background-color: #DDD5D0 !important; /* Couleur de fond de la page : couleur Timberwolf */
 	font-weight: 500; /* Grossir le texte */
-	overflow-x: hidden; /* Pas de défilement horizontal */
 }
 /*****BANNIERE*****/
 #nom_prenom{
@@ -54,64 +53,37 @@ body{
 }
 
 /*** Parcours d'étude ***/
-.timeline{
-	width: 80%; /* Largeur = 80% de l'écran */
-	margin: 0 auto; /* Élément centré horizontalement */
-	position: relative; /* Positionnement par rapport au parent */
-	border: none; /* Pas de bordure */
-}
-/*règle blanche verticale*/
-.timeline::after {
-    content: ""; /* Création d'un élément vide */
-    width: 6px; /* Largeur de la ligne */
-    background-color: #F2F2F2; /* Couleur de la ligne (blanc cassé) */
-    position: absolute; /* Position absolue par rapport à .timeline */
-    top: 0px; /* Ligne commençant d'en haut du conteneur */
-    bottom: 0px; /* Ligne étendue jusqu'en bas */
-    left: 50%; /* Ligne centrée horizontalement */
+.timeline {
+    text-align: center; /* Centre les enfants horizontalement */
+    margin-top: 8%; /* Espacement par rapport à la barre de menu */
+    display: flex; /* Utilisation de Flexbox */
+    justify-content: space-between; /* Distribue l'espace entre les éléments */
+    padding: 0 5%; /* Ajoute un padding sur les côtés gauche et droit pour espacer les containers */
+    width: 100%; /* Assure que la timeline prend toute la largeur disponible */
 }
 .container {
     position: relative; /* Positionnement par rapport au parent */
-    display: inline-block; /* Affichage en ligne avec le bloc */
+    display: flex; /* Disposition en colonne */
+    flex-direction: column; /* Alignement vertical */
+    align-items: center; /* Centrage horizontal */
+    width: 30%; /* Largeur du bloc de contenu */
+    height: 310px;
 }
-/*cercle sur la timeline*/
-.container::after {
-    content: ""; /* Création d'un élément vide */
-    position: absolute; /* Positionnement absolu du cercle */
-    left: 20%; /* Positionne le cercle à 20% de la largeur de son parent */
-    top: 15px; /* Positionne le cercle à 15px du haut */
-    width: 25px; /* Largeur du cercle */
-    height: 25px; /* Hauteur du cercle */
-    border-radius: 50%; /* Forme un cercle parfait */
-    right: 20%; /*  Positionne à droite de l'écran à 20%*/
-    border: 4px solid #BB728A; /* Bordure de 4px de couleur #BB728A (Chinese Rose) */
-    background-color: #F2F2F2; /* Fond du cercle (blanc cassé) */
-    z-index: 1; /* Positionne le cercle devant les autres éléments */
-}
+/* Bloc de contenu */
 .content {
-    width: 50%; /* Largeur du bloc de contenu (50% de l'écran) */
     border-radius: 10px; /* Coins arrondis */
     font-size: 100%; /* Taille de police de 100% */
     text-align: center; /* Texte centré */
-    padding: auto; /* Pas de padding */
+    padding: 10px; /* Espacement intérieur */
     background-color: #56445D; /* Couleur de fond : English Violet */
     color: #F2F2F2; /* Couleur du texte */
+    height: 100%;
+	width: 100%;
 }
-.left {
-    left: 0%; /* Positionnement à gauche */
-}
-.right {
-    left: 57%; /* Positionnement à droite */
-}
-.left::after {
-    margin-left: 37%; /* Décalage du cercle à gauche */
-}
-.right::after {
-    margin-left: -28.7%; /* Décalage du cercle à droite*/
-}
+/* Effet au survol */
 #Prepa:hover, #BUT:hover {
     cursor: pointer; /* Changement de curseur au survol */
-	background : linear-gradient(125deg, #56445D 92.5%, #BFACB5); /* Nouvelle couleur au survol : Rose Quartz */
+    background: linear-gradient(125deg, #56445D 92.5%, #BFACB5); /* Nouvelle couleur au survol : Rose Quartz */
 }
 
 
@@ -150,7 +122,6 @@ body{
         width: 100%; /* Le menu occupe toute la largeur */
         background-color: #56445D; /* Même couleur de fond que la navbar */
     }
-
     .nav-item {
         width: 100%; /* Chaque item prend toute la largeur */
     }
@@ -166,14 +137,6 @@ body{
     .timeline {
         top: 5%; /* Espacement haut de 5% */
         transition: margin-top 0.3s ease; /* Pour rendre l'animation fluide */
-    }
-
-    .timeline::after { 
-        display: none; /* Supprime la ligne verticale */
-    }
-
-    .container::after { 
-        display: none; /* Supprime les cercles */
     }
 
     .container {

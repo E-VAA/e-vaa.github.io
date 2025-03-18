@@ -2,7 +2,6 @@
 body{
 	background-color: #DDD5D0 !important; /* Couleur de fond de la page : couleur Timberwolf */
 	font-weight: 500; /* Grossir le texte */
-	overflow-x: hidden; /* Pas de défilement horizontal */
 }
 /*****BANNIERE*****/
 #nom_prenom{
