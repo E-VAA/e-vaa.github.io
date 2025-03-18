@@ -1,0 +1,121 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>E-portfolio d'Eva BERTRAND</title>
+		<meta charset='utf-8'>
+		<link rel='stylesheet' type='text/css' href='CSS_perso/style_contact.css'>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Century+Schoolbook&display=swap">
+		<link rel='stylesheet' type='text/css' href='CSS_bootstrap\bootstrap.min.css'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	
+	<body>
+		<header>
+			<div id='rose'>
+				<h1 id='nom_prenom'>Eva BERTRAND</h1>
+			</div>
+			<div id='violet'>
+				<nav class="navbar navbar-expand-lg navbar-dark container-fluid">
+					<div class="container-fluid">
+						<a class="navbar-brand" href="#"></a>
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarNavDropdown">
+							<ul class="navbar-nav">
+								<li class="nav-item">
+									<a class="nav-link" href="Presentation.html">A Propos de Moi </a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="Formation.html">Mes Formations</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="Competence.html">Mes Compétences</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="Experience.html">Expérience Profesionnelle </a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="Projet.html">Mes Projets</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="#"><b>Contact et CV</b></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		
+			<!---- PAGE DE CONTACT  ---->
+		<div class="flex-container">
+			<a class='doc_pdf' href="docs/CV.pdf" download>
+			<img id='telecharge' src="images/cv.png" alt="Image à télécharger">
+			</a>
+			<div class="Joindre">
+					<!-- ***** Formulaire de contact ***** -->
+				<div class="contactez_moi">
+					<h3>Contactez-moi</h3>
+					<p>Un problème, une question? N’hésitez pas à utiliser ce formulaire pour prendre contact!</p>
+					<form action="mailto:eva.bertrand78@gmail.com" method="post" enctype="text/plain">
+						<div class="form-floating mb-3">
+							<div class='nom'>
+								<label for="nom">Votre nom</label>
+								<input type="text" id="nom" name="nom" placeholder="Nom" required>
+							</div>
+							<div class='prenom'>
+								<label for="nom">Votre Prénom</label>
+								<input type="text" id="prénom" name="prénom" placeholder="Prénom" required>
+							</div>
+							<div class='email'>
+								<label for="Email">Votre e-mail</label>
+								<input type="email" id="email" name="Email" placeholder="monadresse@mail.com" required>
+							</div>
+							<div class='message'>
+								<label for="message">Votre message</label>
+								<textarea id="message" name="message" placeholder="Bonjour, je vous contacte car...." required></textarea>
+							</div>
+							<div class='bouton'>
+								<button type="submit">Envoyer mon message</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="liens_utiles">
+					Liens Utiles:
+					<div class='liens'>
+						<br>
+						<p><a id='linkedin' href="https://www.linkedin.com/in/eva-bertrand-9b2051271">LinkedIn</p>
+						<p><a id='myjobglasses' href='https://www.myjobglasses.com/'>MyJobGlasses</p>
+						<br>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		<!---- JAVASCRIPT ET BOOTSTRAP ---->
+	<script>
+		// Sélectionner le bouton toggler et la flex-container
+		const navbarToggler = document.querySelector('.navbar-toggler');
+		const flexContainer = document.querySelector('.flex-container'); // Sélectionne le conteneur flex
+
+		// Ajouter un événement "click" sur le bouton toggler
+		navbarToggler.addEventListener('click', function() {
+			// Vérifier si le menu est ouvert (basé sur l'attribut aria-expanded)
+			const isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
+
+			// Si le menu est ouvert, déplacer la flex-container vers le bas
+			if (isExpanded) {
+				flexContainer.style.marginTop = '75%'; // Ajuste la marge du conteneur pour éviter qu'il soit couvert
+			} else {
+				flexContainer.style.marginTop = '5%'; // Remet la flex-container à sa position d'origine
+			}
+		});
+	</script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		
+	</body>
+</html>
